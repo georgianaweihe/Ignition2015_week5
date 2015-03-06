@@ -6,11 +6,17 @@ Diving deeper in the MVC aspects of Rails
 #### Required 
 1. Read the [Odin Project Routing Guide](http://www.theodinproject.com/ruby-on-rails/routing) and use it to <strong>answer the following questions</strong>
   1. What is the "Root" route?
+    When our rails applications recieve an incoming request from the user who wants to visit the homepage of the app, root:to tells rails which controller and method(s) inside the controller to map that route too. I think of routes like an old school landline phone operator, where the user requests are taken by the operator who "translates" their request by plugging the line into the proper plug (route).
   2. What are the seven RESTful routes for a resource?
+    The seven RESTful routes are the seven main types of actions we can call on a resource, each of which are comprised of/begin with/defined by one of the four basic operations of the hypertext transfer protocol (GET, POST, PUT or DELETE). The seven RESTful routes are used often so Rails has the helper method, resources :posts, which groups their seven lines of code into a single line called within config/routes.rb. The seven RESTful routes are GET 1)all the post pages, 2)just one post page, 3)a new post page, 4)an edit post page, as well as routes to create and update a users account data ie POST 5)the users data to the server and PUT 6)the users data update the server, and lastly 7) DELETE a post.
   3. Which RESTful routes share the same URL but use different verbs?
+    1)GET all the post pages and 5)POST the users data to the server both submit to the same URL. The RESTful routes 2)GET a single post, 6)PUT the updates from the user on the server and 7)DELETE a post each submit to the same URL but use a different HTTP verb.
   4. How do you specify an ID or other variable in a route?
+    You can specify an ID or other variable by prepending the field with a colon.
   5. How can you easily write all seven RESTful routes in Rails?
-  6. 1. What is the Rails helper method that creates the HTML for links?
+    As I mentioned above, the seven RESTful routes are seven lines of code (for each route) that can be called in Rails using the single line helper method, resources :posts, in config/routes.rb
+  6. What is the Rails helper method that creates the HTML for links?
+    The link(underscore)to helper method lets you create links. In order to do so, you call the name of the method followed by the "text or title" that you want the user to see and lastly a path or URL. The URL can be written explicitly or we can use the path helper method to generate a path when link to method is called.
 2. Read the [Odin Project Controller Guide](http://www.theodinproject.com/ruby-on-rails/controllers)
 3. Read the [Odin Project Views Guide](http://www.theodinproject.com/ruby-on-rails/views) and use it to <strong>answer the following questions</strong>
   1. What is a layout?
