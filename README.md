@@ -31,54 +31,56 @@ The link _ to helper method lets you create links. In order to do so, you call t
 
 2. Read the [Odin Project Controller Guide](http://www.theodinproject.com/ruby-on-rails/controllers)
 3. Read the [Odin Project Views Guide](http://www.theodinproject.com/ruby-on-rails/views) and use it to <strong>answer the following questions</strong>
-  1. What is a layout?
 
-A layout for an app is what its name describes--it contains/lays out all the HTML sections needed across all your webpages, including things like the html tags and the body tags, as well as "navbars and footers and snippets of code for displaying flash messages". Thus, layouts are "basically just a shell around the individual page". ("Views", The Odin Project)
+1. What is a layout?
 
-  2. What's the difference between a "view template" and a "layout"?
+A layout contains the basic HTML structures such as html and body tags and code to load javascript and css files. Thus, layouts are "basically just a shell around the individual page" which contain anything needed across all your webpages. ("Views", The Odin Project)
 
+2. What's the difference between a "view template" and a "layout"?
 
-  3. What is a "Preprocessor"?
+View templates are a collection of partials and HTML that dynamically change based on your route call.
 
-A preprocessor preprocesses code on the server by executing it before sending a finalized HTML file to the browser. 
+3. What is a "Preprocessor"?
 
-  4. Why are preprocessors useful?
+A preprocessor executes the file on the server (including the ERB) in order to send a finalized HTML file to the browser. 
 
-Preprocessing allows you to use dynamic code within HTML.
+4. Why are preprocessors useful?
 
-  5. How do you make sure a preprocessor runs on your file?
+Preprocessing allows you to code dynamically within HTML.
+
+5. How do you make sure a preprocessor runs on your file?
 
 Extensions on file names such as ".html.erb" and ".css.scss", which we have used before, instruct Rails to preprocess before sending it off to the browser.
 
-  6. What's the outputted filetype of a preprocessed *.html.erb file? What about a *.css.scss file?
+6. What's the outputted filetype of a preprocessed *.html.erb file? What about a *.css.scss file?
 
 The outputted filetype of a preprocessed *.html.erb file is a regular HTML file, and *.css.scss is a regular CSS file.
 
-  8. What is the difference between the <%= and <% tags?
+7. What is the difference between the <%= and <% tags?
 
 <%= tags are going to execute the embedded Ruby code and return something that will be displayed in the HTML template, such as instance variables. The <% tags will also execute embedded Ruby code but will not return anything to display in the HTML file that is sent to the browser.
 
-  8. What is a view partial?
+8. What is a view partial?
 
 It is a partial section of a view template that can be shared by other files, allowing the user to organize and reuse similar code wherever it may be needed.
 
-  9. How do you insert a partial into your view?
+9. How do you insert a partial into your view?
 
 In your app/views folder, you can write a view partial file then call it in whatever view templates you need it in.
 
-  10. How can you tell that a view file is a partial?
+10. How can you tell that a view file is a partial?
 
 Partials can be recognized bu their name--the file is named according to the directory it can be found under, then the underscored file name is fitted with the proper extension designation (like ".html.erb"). 
 
-  11. How do you pass a local variable to a partial?
+11. How do you pass a local variable to a partial?
 
 You should explicitly pass it by losing the @ and using the :locals key options hash in the render method.
 
-  12. What's the magical Rails shortcut for rendering a User? A bunch of Users?
+12. What's the magical Rails shortcut for rendering a User? A bunch of Users?
 
 You can tell Rails to render the User directly rather than making it into its own partial. Call a for @users.each loop and inside the loop, render user. To render a bunch of users, the line " render @users " will suffice.
 
-  13. What are asset tags and why are they used?
+13. What are asset tags and why are they used?
 
 Asset tags grab your images and render their proper HTML tag for you.
 
