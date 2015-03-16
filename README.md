@@ -11,7 +11,7 @@ When our rails applications recieve an incoming request from the user who wants 
 
   2. What are the seven RESTful routes for a resource?
 
-The seven RESTful routes are the seven main types of actions we can call on a resource, each of which are comprised of/begin with/defined by one of the four basic operations of the hypertext transfer protocol (GET, POST, PUT or DELETE). The seven RESTful routes are used often so Rails has the helper method, resources :posts, which groups their seven lines of code into a single line called within config/routes.rb. The seven RESTful routes are GET 1)all the post pages, 2)just one post page, 3)a new post page, 4)an edit post page, as well as routes to create and update a users account data ie POST 5)the users data to the server and PUT 6)the users data update the server, and lastly 7) DELETE a post.
+The seven RESTful routes are the seven main types of actions we can call on a resource, each of which are comprised of/begin with/defined by one of the four basic operations of the hypertext transfer protocol (GET, POST, PUT or DELETE). The seven RESTful routes are used often so Rails has the helper method, resources :posts, which groups their seven lines of code into a single line called within config/routes.rb. The seven RESTful routes are GET 1)all the post pages ie "index", 2)just one post page ie "show", 3)a new post page ie "new", 4)an edit post page ie "edit", as well as routes to create and update a users account data ie POST 5)the users data to the server ie "create" and PUT 6)the users data update the server ie "update", and lastly 7) DELETE a post ie "destroy".
 
   3. Which RESTful routes share the same URL but use different verbs?
 
