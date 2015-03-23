@@ -79,5 +79,5 @@ You can tell Rails to render the User directly rather than making it into its ow
 
 Asset tags grab images and will render their proper HTML tag for you.
 
-##### Link to Odin Project Basic Routes, Views and Controllers repo: [my odin repo](<linkhere>)
-##### Link to Hartl's Rails Tutorial Chapter 5 repo: [my hartl's repo](<linkhere>)
+##### Link to Odin Project Basic Routes, Views and Controllers repo: [my odin repo](<https://github.com/georgianaweihe/application_skeleton>)
+##### Link to Hartl's Rails Tutorial Chapter 5 repo: [my hartl's repo](<https://github.com/georgianaweihe/sample_app>)
