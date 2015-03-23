@@ -2,17 +2,28 @@
 ##### Odin Project Routing Guide Questions:
 - What is the "Root" route?
 
-When our rails applications recieve an incoming request from the user who wants to visit the homepage of the app, root:to tells rails which controller and method(s) inside the controller to map that route too. I think of routes like an old school landline phone operator, where the user requests are taken by the operator who "translates" their request by plugging the line into the proper plug (route).
-
+I think of routes like an old school landline phone operator, where the user requests are taken by the operator who "translates" their request by plugging the line into the proper plug (root route). The root route is usually the 'home' page. The root route then is like a phone call to a big house--the caller gets connected to the mainline at the house (root route) but once in then the caller might get connected to the Living Room or a Bedroom or the Garage depending on who they are seeking to speak to in the house. In Rails, when applications recieve an incoming request from the user who wants to visit the homepage of an app, root:to tells rails which controller and method(s) inside the controller to map that route too.
 
 - What are the seven RESTful routes for a resource?
 
-The seven RESTful routes are the seven main types of actions we can call on a resource, each of which are comprised of/begin with/defined by one of the four basic operations of the hypertext transfer protocol (GET, POST, PUT or DELETE). The seven RESTful routes are used often so Rails has the helper method, resources :posts, which groups their seven lines of code into a single line called within config/routes.rb. The seven RESTful routes are GET 1)all the post pages ie "index", 2)just one post page ie "show", 3)a new post page ie "new", 4)an edit post page ie "edit", as well as routes to create and update a users account data ie POST 5)the users data to the server ie "create" and PUT 6)the users data update the server ie "update", and lastly 7) DELETE a post ie "destroy".
-
+The seven restful routes are the seven main types of actions we can call on a resource, each of which are comprised of/begin with/defined by one of the four basic operations of the hypertext transfer protocol (GET, POST, PUT or DELETE). The seven restful routes are used so often that the helper method resources :posts was created in Rails to group call their seven lines of code into a single line in config/routes.rb. The seven RESTful routes are 
+  GET 
+    1)all the post pages ie "index" 
+    2)just one post page ie "show" 
+    3)a new post page ie "new" 
+    4)an edit post page ie "edit" 
+as well as routes to create and update a users account data ie 
+  POST 
+    5)the users data to the server ie "create" 
+and 
+  PUT 
+    6)the users data update the server ie "update"
+and lastly, 
+  7) DELETE a post ie "destroy".
 
 - Which RESTful routes share the same URL but use different verbs?
 
-1)GET all the post pages and 5)POST the users data to the server both submit to the same URL. The RESTful routes 2)GET a single post, 6)PUT the updates from the user on the server and 7)DELETE a post each submit to the same URL but use a different HTTP verb.
+"Index" and "create" ie, 1)GET all the post pages and 5)POST the users data to the server, respectively, both submit to the same URL. And, the routes "show", "update" and "destroy" also each submit to the same URL but use a different HTTP verb.
 
 - How do you specify an ID or other variable in a route?
 
@@ -33,11 +44,11 @@ A layout contains the basic HTML structures such as html and body tags and code 
 
 - What's the difference between a "view template" and a "layout"?
 
-View templates are a collection of partials and HTML that dynamically change based on your route call.
+View templates are a collection of partials and HTML that dynamically change based on your route call. A layout by comparison is going to contain everything that every page needs. The idea for Layouts was born from the railsy aim to have as little repetition as possible.
 
 - What is a "Preprocessor"?
 
-A preprocessor executes the file on the server (including the ERB) in order to send a finalized HTML file to the browser.
+A preprocessor in our case executes a file on the server, including the ERB, in order to send a finalized HTML file to the browser.
 
 - Why are preprocessors useful?
 
@@ -53,7 +64,7 @@ The outputted filetype of a preprocessed *.html.erb file is a regular HTML file,
 
 - What is the difference between the <%= and <% tags?
 
-<%= tags are going to execute the embedded Ruby code and return something that will be displayed in the HTML template, such as instance variables. The <% tags will also execute embedded Ruby code but will not return anything to display in the HTML file that is sent to the browser.
+<%= tags are going to execute the embedded Ruby code and return something that will be displayed in the HTML template, such as instance variables. The <% tags will also execute embedded Ruby code but will not return anything to display in the HTML file that is sent to the browser. Rather, these tags should be used to execute code that is important to the back end but need not be shared with the browser.
 
 - What is a view partial?
 
@@ -69,7 +80,7 @@ Partials can be recognized bu their name--the file is named according to the dir
 
 - How do you pass a local variable to a partial?
 
-You should explicitly pass it by losing the @ and using the :locals key options hash in the render method.
+You should explicitly pass it by losing the @ and using the :locals key hash in the render method.
 
 - What's the magical Rails shortcut for rendering a User? A bunch of Users?
 
@@ -79,5 +90,5 @@ You can tell Rails to render the User directly rather than making it into its ow
 
 Asset tags grab images and will render their proper HTML tag for you.
 
-##### Link to Odin Project Basic Routes, Views and Controllers repo: [my odin repo](<https://github.com/georgianaweihe/application_skeleton>)
-##### Link to Hartl's Rails Tutorial Chapter 5 repo: [my hartl's repo](<https://github.com/georgianaweihe/sample_app>)
+##### Link to Odin Project Basic Routes, Views and Controllers repo: [Gigi's Odin Repo](<https://github.com/georgianaweihe/application_skeleton>)
+##### Link to Hartl's Rails Tutorial Chapter 5 repo: [Gigi's Hartl's Repo](<https://github.com/georgianaweihe/sample_app>)
